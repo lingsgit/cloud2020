@@ -1,5 +1,5 @@
 server:
-  port: 3344
+  port: 3366
 
 
 eureka:
@@ -8,22 +8,21 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/
 spring:
   application:
-    name: cloud-config-center
+    name: config-client
   cloud:
     config:
-      server:
-        git:
-          uri: https://github.com/lingsgit/cloud-config.git
-          search-paths:
-            - cloud-config
       label: master
+      name: config
+      profile: dev
+      uri: http://localhost:3344
   rabbitmq:
     host: www.mylinux.com
     port: 5672
     username: guest
     password: guest
+
 management:
   endpoints:
     web:
       exposure:
-        include: 'bus-refresh'
+        include: "*"
