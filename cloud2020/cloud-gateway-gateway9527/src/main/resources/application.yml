@@ -5,16 +5,21 @@ spring:
     name: cloud-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: payment_route
-          uri: http://localhost:8001
+          #uri: lb://localhost:8001   cloud-payment-service
+          uri: lb://cloud-payment-service
           predicates:
-            - Path=/payment/gateway1/*
+            - Path=/payment/getPort
 
         - id: payment_route2
-          uri: http://localhost:8001
+          #uri: http://localhost:8001
+          uri: lb://cloud-payment-service
           predicates:
-            - Path=/payment/gateway2/*
+            - Path=/payment/getPort
 
 eureka:
   instance:

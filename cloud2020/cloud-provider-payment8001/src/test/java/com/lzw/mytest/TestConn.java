@@ -26,6 +26,7 @@ import java.sql.SQLException;
 public class TestConn {
     @Resource
     DataSource dataSource;
+    //test update
 
     @Test
     public void test01() throws SQLException {

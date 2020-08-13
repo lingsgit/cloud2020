@@ -67,4 +67,10 @@ public class PaymentController {
         instances.forEach(x->log.info(x.getServiceId()+"\t"+x.getHost()+"\t"+x.getUri()));
         return this.discoveryClient;
     }
+
+    @GetMapping("/getPort")
+    public String getPort(){
+
+        return serverPort;
+    }
 }

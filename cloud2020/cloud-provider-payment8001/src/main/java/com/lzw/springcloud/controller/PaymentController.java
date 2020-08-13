@@ -90,4 +90,10 @@ public class PaymentController {
 
         return serverPort+"\t gateway2"+"\t"+id;
     }
+
+    @GetMapping("/getPort")
+    public String getPort(){
+
+        return serverPort;
+    }
 }
