@@ -20,3 +20,6 @@
 /cloud-stream-rabbitmq-provider8801/target/
 /cloud-stream-rabbitmq-provider8802/target/
 /cloud-stream-rabbitmq-provider8803/target/
+/cloudalibaba-provider-payment9002/target/
+/cloudalibaba-provider-payment9001/target/
+/cloudalibaba-sentinel-service8401/target/
